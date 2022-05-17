@@ -21,10 +21,29 @@ function checkCNPJ(cnpj) {
                     document.getElementById("campoUF").value = dado.uf;
                     document.getElementById("campoAbertura").value = dado.abertura;
                     document.getElementById("campoBairro").value = dado.bairro;
+                    document.getElementById("campoSit").value = dado.situacao;
+                    document.getElementById("campoCEP").value = dado.cep;
+                    document.getElementById("campoCap").value = dado.capital_social;
                 }
                 console.log(dado);
             }
 
         })
     }
+}
+
+function limpar() {
+    document.getElementById("campoRazaoSocial").value = " ";
+    document.getElementById("campoRazaoSocial").value = " ";
+    document.getElementById("campoNomeFantasia").value = "";
+    document.getElementById("campoLogradouro").value = "";
+    document.getElementById("campoNumero").value = "";
+    document.getElementById("campoMunicipio").value = "";
+    document.getElementById("campoUF").value = "";
+    document.getElementById("campoAbertura").value = "";
+    document.getElementById("campoBairro").value = "";
+    document.getElementById("campoSit").value = "";
+    document.getElementById("campoCEP").value = "";
+    document.getElementById("campoCap").value = "";
+    document.getElementById("CNPJ").value = "";
 }
