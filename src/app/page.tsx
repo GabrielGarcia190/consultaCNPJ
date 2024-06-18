@@ -1,113 +1,220 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="bg-[#E5E7EB] w-screen h-screen flex flex-col items-center justify-center text-[#21262D]">
+    <div className="flex items-end justify-end">
+      <h1 className="font-semibold text-7xl ml-5 ">
+        Consulta CNPJ
+      </h1>
+    </div>
+    <p className="mt-4 text-sm">
+      Não armazenamos nenhum tipo de dado, só realizamos consultas.
+    </p>
+
+    <input
+      id="CNPJ"
+      type="text"
+      className="bg-[#CECFD2] p-2 text-center text-[#21262D] mt-10 rounded-md w-[25vw]"
+      placeholder="Digite um CNPJ"
+    />
+    <p className="text-[#AAA4A4]  mt-2 text-sm">Ex: 00.000.000/0000-00</p>
+
+    <button
+      className="  px-4 py-2 mt-3 uppercase text-white font-bold rounded-xl bg-[#003772]  hover:bg-[#21262D] hover:border-4 hover:border-[#003772]"
+      type="submit"
+    >
+      CONSULTAR
+    </button>
+    {/* <div>
+      <Modal
+        isOpen={modalError}
+        overlayClassName="modal-overlay"
+        contentLabel="modal-resultado"
+        className="flex flex-col rounded-lg  bg-[#E5E7EB] w-[30vw] h-[30vh] shadow-md"
+      >
+        <button onClick={closeModalError}>
+          <X
+            size={30}
+            className="text-red-600 ml-[27vw] mt-2"
+            weight="bold"
+          />
+        </button>
+        <div className="bg-[#E5E7EB]  mx-auto flex h-[30vh] flex-col  items-center">
+          <Warning size={50} color="red" />
+          <h1 className="ml-4 text-black font-bold text-xl ">
+            - Erro ao consultar -
+          </h1>
+          <p className="ml-4 mt-4">Por favor insira um CEP válido !!!</p>
         </div>
-      </div>
+      </Modal>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Modal
+        isOpen={modalIsOpen}
+        overlayClassName="modal-overlay"
+        contentLabel="modal-resultado"
+        className="flex flex-col rounded-lg  bg-[#E5E7EB] w-[35vw] h-full shadow-xl"
+      >
+        <div className="bg-[#E5E7EB] text-sm  text-[#AAA4A4] mx-auto flex flex-col mt-4 items-center">
+          <div className="flex flex-col items-center justify-center">
+            <button onClick={closeModal}>
+              <X size={30} className="text-red-600 ml-[30vw]" weight="bold" />
+            </button>
+            <h1 className="font-bold text-[#303740] text-xl">
+              - Resultado da Busca -
+            </h1>
+          </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <div className="flex flex-col mt-5 text-start w-[30vw]">
+            <p className="text-[#303740]">Razao Social:</p>
+            <p className="bg-[#CECFD2] p-2 w-full  text-[#303740] flex flex-row items-center justify-between rounded-lg">
+              {resAPI.razao_social}
+              <button onClick={() => copyToClipboard(resAPI.razao_social)}>
+                <Copy weight="bold" size={25} />
+              </button>
+            </p>
+          </div>
+          <div className="flex flex-col mt-5 text-start w-[30vw]">
+            <p className="text-[#303740]">Nome Fantasia:</p>
+            <p className="bg-[#CECFD2] p-2 w-full  text-[#303740] flex flex-row items-center justify-between rounded-lg">
+              {resAPI.estabelecimento.nome_fantasia == null
+                ? "******"
+                : resAPI.estabelecimento.nome_fantasia}
+              <button
+                onClick={() =>
+                  copyToClipboard(resAPI.estabelecimento.nome_fantasia)
+                }
+              >
+                <Copy weight="bold" size={25} />
+              </button>
+            </p>
+          </div>
+          <div className="flex flex-col mt-5 text-start w-[30vw]">
+            <div className="flex">
+              <p className="w-[24vw] text-[#303740]"> Logradouro:</p>
+              <p className=" text-[#303740]"> Número:</p>
+            </div>
+            <div className="flex flex-row">
+              <p className="bg-[#CECFD2] p-2 w-[24vw]  text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {`${resAPI.estabelecimento.tipo_logradouro} ${resAPI.estabelecimento.logradouro}`}
+                <button
+                  onClick={() =>
+                    copyToClipboard(resAPI.estabelecimento.logradouro)
+                  }
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+              <p className="bg-[#CECFD2] p-2 w-[8vw] ml-4 text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {resAPI.estabelecimento.numero}
+                <button
+                  onClick={() =>
+                    copyToClipboard(resAPI.estabelecimento.numero)
+                  }
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-row">
+            <div className="flex flex-col mt-5 text-start w-[30vw]">
+              <div className="flex">
+                <p className="w-[15vw] text-[#303740]"> Bairro:</p>
+                <p className=" ml-4 text-[#303740]"> Complemento:</p>
+              </div>
+              <div className="flex flex-row">
+                <p className="bg-[#CECFD2] p-2 w-[15vw]  text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                  {resAPI.estabelecimento.bairro}
+                  <button
+                    onClick={() =>
+                      copyToClipboard(resAPI.estabelecimento.bairro)
+                    }
+                  >
+                    <Copy weight="bold" size={25} />
+                  </button>
+                </p>
+                <p className="bg-[#CECFD2] p-2 w-[15vw] ml-4 text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                  {resAPI.estabelecimento.complemento == null
+                    ? "****"
+                    : resAPI.estabelecimento.complemento}
+                  <button
+                    onClick={() =>
+                      copyToClipboard(resAPI.estabelecimento.complemento)
+                    }
+                  >
+                    <Copy weight="bold" size={25} />
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col mt-5 text-start w-[30vw]">
+            <div className="flex">
+              <p className="w-[10vw] text-[#303740]"> Cidade:</p>
+              <p className=" ml-4 w-[10vw] text-[#303740]"> Estado:</p>
+              <p className=" ml text-[#303740]"> CEP:</p>
+            </div>
+            <div className="flex flex-row">
+              <p className="bg-[#CECFD2] p-2 w-[10vw]  text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {resAPI.estabelecimento.cidade.nome}
+                <button
+                  onClick={() =>
+                    copyToClipboard(resAPI.estabelecimento.cidade.nome)
+                  }
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+              <p className="bg-[#CECFD2] p-2 w-[10vw] ml-4 text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {resAPI.estabelecimento.estado.sigla}
+                <button
+                  onClick={() =>
+                    copyToClipboard(resAPI.estabelecimento.estado.sigla)
+                  }
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+              <p className="bg-[#CECFD2] p-2 w-[10vw] ml-4 text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {resAPI.estabelecimento.cep}
+                <button
+                  onClick={() => copyToClipboard(resAPI.estabelecimento.cep)}
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col mt text-start w-[30vw]">
+          <div className="flex mt-5 ">
+              <p className="w-[15vw] text-[#303740]"> País:</p>
+              <p className="text-[#303740] ml-2"> Situação Cadastral:</p>
+            </div>
+            <div className="flex flex-row ">
+              <p className="bg-[#CECFD2] p-2 w-[15vw]  text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {resAPI.estabelecimento.pais.nome}
+                <button
+                  onClick={() =>
+                    copyToClipboard(resAPI.estabelecimento.pais.nome)
+                  }
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+              <p className="bg-[#CECFD2] p-2 w-[15vw] ml-4 text-[#303740] flex flex-row items-center justify-between rounded-lg">
+                {resAPI.estabelecimento.situacao_cadastral}
+                <button
+                  onClick={() =>
+                    copyToClipboard(resAPI.estabelecimento.situacao_cadastral)
+                  }
+                >
+                  <Copy weight="bold" size={25} />
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </Modal>
+    </div> */}
+  </div>
   );
 }
