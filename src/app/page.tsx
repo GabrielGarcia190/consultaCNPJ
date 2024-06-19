@@ -1,30 +1,28 @@
 export default function Home() {
   return (
-    <div className="bg-[#E5E7EB] w-screen h-screen flex flex-col items-center justify-center text-[#21262D]">
-    <div className="flex items-end justify-end">
-      <h1 className="font-semibold text-7xl ml-5 ">
-        Consulta CNPJ
-      </h1>
-    </div>
-    <p className="mt-4 text-sm">
-      Não armazenamos nenhum tipo de dado, só realizamos consultas.
-    </p>
+    <div className="bg-primary-1 w-screen h-screen flex flex-col items-center justify-center text-secondary-1">
+      <div className="flex items-end justify-end">
+        <h1 className="font-semibold text-7xl ml-5 ">
+          Consulta CNPJ
+        </h1>
+      </div>
+      <p className="mt-4 text-sm w-1/4 text-center">
+        Não armazenamos nenhum tipo de dado, nem geramos nenhum tipo de documento oficial, só realizamos consultas.
+      </p>
 
-    <input
-      id="CNPJ"
-      type="text"
-      className="bg-[#CECFD2] p-2 text-center text-[#21262D] mt-10 rounded-md w-[25vw]"
-      placeholder="Digite um CNPJ"
-    />
-    <p className="text-[#AAA4A4]  mt-2 text-sm">Ex: 00.000.000/0000-00</p>
+      <input
+        id="CNPJ"
+        type="text"
+        className="bg-primary-2 p-2 text-center text-secondary-1 mt-10 rounded-md w-[25vw] border-none"
+        placeholder="Digite um CNPJ"
+      />
+      <p className="text-primary-3 mt-2 text-sm">Ex: 00.000.000/0000-00</p>
 
-    <button
-      className="  px-4 py-2 mt-3 uppercase text-white font-bold rounded-xl bg-[#003772]  hover:bg-[#21262D] hover:border-4 hover:border-[#003772]"
-      type="submit"
-    >
-      CONSULTAR
-    </button>
-    {/* <div>
+      <button
+        className="px-4 py-2 mt-3 uppercase text-white font-bold rounded-md bg-secondary-2 hover:bg-secondary-1 hover:border hover:border-secondary-2">
+        CONSULTAR
+      </button>
+      {/* <div>
       <Modal
         isOpen={modalError}
         overlayClassName="modal-overlay"
@@ -215,6 +213,6 @@ export default function Home() {
         </div>
       </Modal>
     </div> */}
-  </div>
+    </div>
   );
 }
